@@ -1,0 +1,60 @@
+{
+    "userSecretsId": "aspnet5-Canvass.Api-264abdc5-a7db-4ad8-a70e-cb87f8a56c12",
+    "version": "1.0.0-*",
+
+    "dependencies": {
+        "AspNet.Security.OAuth.Introspection": "1.0.0-*",
+        "AspNet.Security.OAuth.Validation": "1.0.0-*",
+        "EntityFramework.MicrosoftSqlServer": "7.0.0-*",
+        "Microsoft.AspNet.Authentication.Google": "1.0.0-*",
+        "Microsoft.AspNet.Authentication.Twitter": "1.0.0-*",
+        "Microsoft.AspNet.Authentication.Facebook": "1.0.0-*",
+        "Microsoft.AspNet.Diagnostics": "1.0.0-*",
+        "Microsoft.AspNet.IISPlatformHandler": "1.0.0-*",
+        "Microsoft.AspNet.HttpOverrides": "1.0.0-*",
+        "Microsoft.AspNet.Server.Kestrel": "1.0.0-*",
+        "Microsoft.AspNet.StaticFiles": "1.0.0-*",
+        "Microsoft.Extensions.Logging.Console": "1.0.0-*",
+        "Microsoft.Extensions.Logging.Debug": "1.0.0-*",
+        "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0-*",
+        "OpenIddict": "1.0.0-*",
+        "Microsoft.Extensions.Configuration": "1.0.0-*",
+        "WindowsAzure.Storage": "6.2.2-preview"
+    },
+
+    "compilationOptions": {
+        "emitEntryPoint": true
+    },
+
+    "commands": {
+        "web": "Mvc.Server"
+    },
+
+    "frameworks": {
+        "dnx451": {
+            "dependencies": {
+                "RestSharp": "105.2.3"
+            }
+        },
+        "dnxcore50": { }
+
+    },
+
+    "exclude": [
+        "wwwroot",
+        "node_modules",
+        "bower_components"
+    ],
+
+    "publishExclude": [
+        "node_modules",
+        "bower_components",
+        "**.xproj",
+        "**.user",
+        "**.vspscc"
+    ],
+
+    "scripts": {
+        "prepublish": [ "npm install", "bower install", "gulp clean", "gulp min" ]
+    }
+}
